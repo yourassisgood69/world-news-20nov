@@ -1,0 +1,26 @@
+You are building a make.fun competition entry for news-image-20261120:
+"Sum up 20 November's world news in one image".
+
+Build a program from scratch in ~/workspace/makefun/news-image-20261120/world-news-20nov/
+that draws a newspaper front page (1024x1024 PNG, at most 1 MiB) with Python
+and Pillow only. The page must show the date "Friday 20 November 2026"
+clearly, one lead story (the Trump-Xi-Putin joint peace declaration from
+Shenzhen), six story cards, and an "Also today" strip — 12 stories in total,
+each verified by web search and documented with its source in NEWS.md.
+Wording must stay close to what was reported, without hype and without
+presenting speculation as fact.
+
+Rules: write draw.py and main.py from scratch. Do NOT read the 18/19
+November entry programs — reading and re-typing existing code does not
+count as authored work. Only the kit, competition.yaml, RULES.txt and this
+brief may be read. The program must be fully deterministic (no randomness,
+no network, no timestamps) and render the same bytes on every run.
+main.py is the entrypoint: it runs draw.render() into MAKEFUN_OUTPUT_DIR
+(default /output), falling back to copying the committed entry.png if
+Pillow is unavailable.
+
+Verify before finishing: render entry.png and check it is exactly
+1024x1024 and at most 1 MiB; run the program twice to different
+directories and confirm byte-identical output; run the kit's
+`makefun check` on the repo and fix any failing check. Do not publish
+and do not submit — a separate agent does that.
